@@ -11,4 +11,7 @@ sudo openssl req \
   -keyout /etc/ssl/private/apache-selfsigned.key \
   -out /etc/ssl/certs/apache-selfsigned.crt \
   -subj "/C=$OPENSSL_COUNTRY/ST=$OPENSSL_PROVINCE/L=$OPENSSL_LOCALITY/O=$OPENSSL_ORGANIZATION/OU=$OPENSSL_ORGUNIT/CN=$OPENSSL_COMMON_NAME/emailAddress=$OPENSSL_EMAIL"
-  
+# Copiamos el archivo default-sl.conf al servidor
+cp ../conf/default-ssl.conf /etc/apache2/sites-available
+#Habilitamos el modulo ssl 
+sudo a2ensite default-ssl.conf
