@@ -52,4 +52,4 @@ sudo a2enmod rewrite
 
 ## Reiniciamos apache para aplicar los cambios
 systemctl restart apache2
-![](/practica-04-iaw/images/ejecucion%20certificado.png)
+![](images/ejecucion%20certificado.png)
